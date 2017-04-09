@@ -1,0 +1,187 @@
+@charset "utf-8";
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: pink;
+}
+
+h1, h2, h3, h4, h5, h6, a, p {
+    font-family: sans-serif;
+}
+
+.slideshowContainer{
+    border: 0px solid white;
+    display: block;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slideshowContainer li {
+    background-color: pink;
+    opacity: 0;
+    position: absolute;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    height: 100%;
+}
+
+
+
+.slideshowContainer img {
+    width: 100%;
+    opacity: 0;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.button-container {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    background: none;
+    width: 140px;
+    height: 50px;
+}
+
+button {
+    color: white;
+    display: block;
+    float: left;
+    background: none;
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    outline-style: none;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 1);
+    color: #db1356;
+    border: none;
+   -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.btnleft {
+    margin-right: 40px;
+    
+}
+
+.btnright {
+   
+}
+
+.slideshow > p {
+    display: none;
+    position: absolute;
+    left: 50px;
+    z-index: 99999;
+    text-align: center;
+    top: 40px;
+    font-family: sans-serif;
+    font-size: 80pt;
+    font-weight: bold;
+    letter-spacing: -3pt;
+    color: transparent;
+    text-transform: lowercase;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+}
+
+.slideshow p:hover {
+    color: rgba(255, 255, 255, 1);
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.descriptActivate {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 50px;
+    right: 230px;
+    z-index: 2;
+    background-color: white;
+    text-align: center;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.descriptActivate:hover {
+    background-color: white;
+}
+.descriptActivate:hover:after {
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    position: relative;
+    top: -1px;
+}
+.descriptActivate:hover:before {
+}
+.descriptActivate:after, .descriptActivate:before  {
+    content: "";
+    display: block;
+    background-color: #db1356;
+    -webkit-transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+    -ms-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+    
+}
+.descriptActivate:after {
+    height: 19px;
+    width: 2px;
+    margin: auto;
+}
+
+.descriptActivate:before {
+    height: 2px;
+    width: 20px;
+    margin: auto;
+    position: relative;
+    top: 10px;
+}
+
+.description {
+    z-index: 1;
+    display: none;
+    width: 500px;
+    position: absolute;
+    top: 180px;
+    text-align: left;
+    left: 50px;
+}
+
+.description p {
+    color: white;
+    font-size: 18pt;
+    line-height: 29px;
+    letter-spacing: 0.03em;
+    text-transform: lowercase;
+font-weight: 100;  
+}
